@@ -1,1 +1,7 @@
-<p>single-post works!</p>
+<div *ngIf="selectedPost">
+    <h2>{{ selectedPost.title }}</h2>
+    <img [src]="selectedPost.thumbnailUrl" alt="Thumbnail">
+    <p>{{ selectedPost.body }}</p>
+
+  </div>
+  

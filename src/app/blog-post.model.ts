@@ -1,4 +1,5 @@
 export interface BlogPost {
+    id: number;
     title: string;
     thumbnailUrl: string;
     body: string;
