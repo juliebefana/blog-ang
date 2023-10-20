@@ -1,11 +1,13 @@
 <div class="header">
-  <nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/blog">Blog</a>
-    <a routerLink="/about">About</a>
-    <a routerLink="/owner">Owner</a>
+  <nav class="bg-stone-200 p-4 flex justify-between items-center">
+    <div>
+        <a routerLink="/" class="text-white mx-4 hover:text-stone-500">Home</a>
+        <a routerLink="/blog" class="text-white mx-4 hover:text-stone-500">Blog</a>
+        <a routerLink="/about" class="text-white mx-4 hover:text-stone-500">About</a>
+        <a routerLink="/owner" class="text-white mx-4 hover:text-stone-500">Owner</a>
+    </div>
+    <button (click)="togglePerspective()" class="bg-stone-300 text-white rounded-full p-2 px-4 hover:bg-stone-400"> {{ perspective }}</button>
   </nav>
-  <button (click)="togglePerspective()">{{ perspective }}</button>
 </div>
 
 <div class="container">
@@ -15,5 +17,6 @@
 <div class="footer">
   <!-- Footer content goes here, including copyright information -->
 </div>
+
 
 
