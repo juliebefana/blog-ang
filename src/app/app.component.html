@@ -9,27 +9,11 @@
 </div>
 
 <div class="container">
-  <div class="main-content">
-    <div class="content">
-      <div class="post-grid">
-        <div *ngFor="let post of blogPosts" class="post">
-          <div class="post-image">
-            <img [src]="post.thumbnailUrl" alt="{{ post.title }}" />
-          </div>
-          <div class="post-details">
-            <h3>{{ post.title }}</h3>
-          </div>
-        </div>      
-      </div>
-      
-    </div>
-
-    <div class="sidebar">
-      <!-- Right sidebar content goes here -->
-    </div>
-  </div>
+  <router-outlet></router-outlet> <!-- This is where the routed component content will be displayed -->
 </div>
 
 <div class="footer">
   <!-- Footer content goes here, including copyright information -->
 </div>
+
+

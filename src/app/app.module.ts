@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 import { OwnerComponent } from './owner/owner.component';
+import { SinglePostComponent } from './single-post/single-post.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OwnerComponent } from './owner/owner.component';
     HomeComponent,
     BlogComponent,
     AboutComponent,
-    OwnerComponent
+    OwnerComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,13 @@
-<p>blog works!</p>
+<div class="post-grid">
+    <div *ngFor="let post of blogPosts" class="post">
+      <div class="post-image">
+        <img [src]="post.thumbnailUrl" alt="{{ post.title }}" />
+      </div>
+      <div class="post-details">
+        <h3>{{ post.title }}</h3>
+        <a [routerLink]="['/blog', post.id]">Read More</a> <!-- Add a link to view individual post -->
+      </div>
+    </div>
+  </div>
+  
+  
