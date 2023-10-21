@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  perspective: string = 'user';
+  perspective: string = 'User';
 
   togglePerspective() {
-    this.perspective = this.perspective === 'user' ? 'owner' : 'user';
+    this.perspective = this.perspective === 'User' ? 'Owner' : 'User';
   }
 }
 
