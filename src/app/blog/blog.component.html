@@ -1,14 +1,15 @@
 <div class="post-grid grid grid-cols-3 gap-4">
-    <div *ngFor="let post of blogPosts" class="post bg-white p-4 rounded-lg shadow-md">
-      <div class="post-image">
-        <img [src]="post.thumbnailUrl" alt="{{ post.title }}" class="w-full h-32 object-cover rounded-lg" />
-      </div>
-      <div class="post-details">
-        <h3 class="text-lg font-semibold">{{ post.title }}</h3>
-        <a [routerLink]="['/blog', post.id]" class="text-blue-500">Read More</a>
-      </div>
+  <div *ngFor="let post of blogPosts" class="post bg-white p-4 rounded-lg shadow-md">
+    <div class="post-image">
+      <img [src]="post.thumbnailUrl" alt="{{ post.title }}" class="w-full h-32 object-cover rounded-lg" />
+    </div>
+    <div class="post-details">
+      <h3 class="text-lg font-semibold">{{ post.title }}</h3>
+      <a [routerLink]="['/blog', post.id]" class="text-blue-500">Read More</a>
     </div>
   </div>
+</div>
+
   
   
   
