@@ -14,7 +14,10 @@ export class BlogService {
       creationDate: new Date(),
       likes: 0,
       dislikes: 0,
-      comments: [],
+      comments: [
+        'Great tips! I tried them and my house feels much cozier now.',
+        'I love these ideas. Thanks for sharing!',
+      ],
     },
     {
       id: 2,
@@ -25,7 +28,10 @@ export class BlogService {
       creationDate: new Date(),
       likes: 0,
       dislikes: 0,
-      comments: [],
+      comments: [
+        'Great tips! I tried them and my house feels much cozier now.',
+        'I love these ideas. Thanks for sharing!',
+      ],
     },
     {
       id: 3,
@@ -36,7 +42,10 @@ export class BlogService {
       creationDate: new Date(),
       likes: 0,
       dislikes: 0,
-      comments: [],
+      comments: [
+        'Great tips! I tried them and my house feels much cozier now.',
+        'I love these ideas. Thanks for sharing!',
+      ],
     },
   ];
 
