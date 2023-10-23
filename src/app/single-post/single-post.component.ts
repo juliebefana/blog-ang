@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BlogPost } from '../blog-post.model';
 import { BlogService } from '../blog.service';
 
+
 @Component({
   selector: 'app-single-post',
   templateUrl: './single-post.component.html',
@@ -10,6 +11,7 @@ import { BlogService } from '../blog.service';
 })
 export class SinglePostComponent implements OnInit {
   selectedPost: BlogPost | null=null;
+  newComment: string = '';
 
   constructor(private route: ActivatedRoute, private blogService: BlogService) {}
 
@@ -29,6 +31,14 @@ export class SinglePostComponent implements OnInit {
       console.log('Retrieved post:', this.selectedPost);
     }
   }
-}
 
+  addComment() {
+    if (this.selectedPost) { // Check if selectedPost is not null
+      if (this.newComment) {
+        this.selectedPost.comments.push(this.newComment);
+        this.newComment = ''; // Clear the input field
+      }
+    }
+  }
+}  
 
