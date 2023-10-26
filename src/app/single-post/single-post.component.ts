@@ -40,5 +40,18 @@ export class SinglePostComponent implements OnInit {
       }
     }
   }
+
+  likePost() {
+    if (this.selectedPost) {
+      this.selectedPost.likes++;
+    }
+  }
+  
+  dislikePost() {
+    if (this.selectedPost) {
+      this.selectedPost.dislikes++;
+    }
+  }
+  
 }  
 
