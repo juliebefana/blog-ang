@@ -1,5 +1,16 @@
 import { Injectable } from '@angular/core';
-import { BlogPost } from './blog-post.model';
+import { BlogPost as LocalBlogPost } from './blog-post.model';
+
+export interface BlogPost {
+  id: number; 
+  title: string;
+  thumbnailUrl: string;
+  body: string;
+  creationDate: Date;
+  likes: number;
+  dislikes: number;
+  comments: string[];
+}
 
 @Injectable({
   providedIn: 'root',
@@ -56,5 +67,10 @@ export class BlogService {
   getBlogPostById(id: number): BlogPost | null {
     return this.blogPosts.find((post) => post.id === id) || null;
   }  
+
+  addBlogPost(blogPost: BlogPost) {
+    this.blogPosts.push(blogPost); 
+  }
+  
 }
 
