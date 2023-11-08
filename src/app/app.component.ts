@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  perspective: string = 'User';
+  constructor(private router: Router) {}
 
   togglePerspective() {
-    this.perspective = this.perspective === 'User' ? 'Owner' : 'User';
+    // Check the current route to determine the target perspective
+    if (this.router.url === '/owner') {
+      this.router.navigate(['/']);
+    } else {
+      this.router.navigate(['/owner']);
+    }
   }
 }
+
 
 
 
