@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BlogPost as LocalBlogPost } from './blog-post.model';
 
+// Define the structure of a blog post
 export interface BlogPost {
-  id: number; 
+  id: number;
   title: string;
   thumbnailUrl: string;
   body: string;
@@ -59,6 +59,25 @@ export class BlogService {
       ],
     },
   ];
+    // Hardcoded posts here
+
+
+  constructor() {
+    this.loadBlogPostsFromLocalStorage(); // Load posts from local storage during initialization
+  }
+
+  // Function to load posts from local storage
+  private loadBlogPostsFromLocalStorage() {
+    const storedPosts = localStorage.getItem('blogPosts');
+    if (storedPosts) {
+      this.blogPosts = JSON.parse(storedPosts);
+    }
+  }
+
+  // Function to save posts to local storage
+  private saveBlogPostsToLocalStorage() {
+    localStorage.setItem('blogPosts', JSON.stringify(this.blogPosts));
+  }
 
   getBlogPosts(): BlogPost[] {
     return this.blogPosts;
@@ -66,11 +85,18 @@ export class BlogService {
 
   getBlogPostById(id: number): BlogPost | null {
     return this.blogPosts.find((post) => post.id === id) || null;
-  }  
-
-  addBlogPost(blogPost: BlogPost) {
-    this.blogPosts.push(blogPost); 
   }
-  
+
+  // Modify the addBlogPost method to save posts to local storage
+  addBlogPost(blogPost: BlogPost) {
+    // Generate a unique ID for the new post
+    blogPost.id = this.blogPosts.length + 1;
+
+    this.blogPosts.push(blogPost);
+
+    // After adding the post, save the updated array to local storage
+    this.saveBlogPostsToLocalStorage();
+  }
 }
+
 
