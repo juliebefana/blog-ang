@@ -9,6 +9,8 @@ import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 import { OwnerComponent } from './owner/owner.component';
 import { SinglePostComponent } from './single-post/single-post.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SinglePostComponent } from './single-post/single-post.component';
     BlogComponent,
     AboutComponent,
     OwnerComponent,
-    SinglePostComponent
+    SinglePostComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

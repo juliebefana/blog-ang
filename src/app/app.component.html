@@ -1,21 +1,10 @@
-<div class="header">
-  <nav class="bg-stone-300 p-4 flex justify-between items-center">
-    <div class="flex items-center"> <!-- Center menu items -->
-      <a routerLink="/" class="text-white mx-4 hover:text-stone-500">Home</a>
-      <a routerLink="/blog" class="text-white mx-4 hover:text-stone-500">Blog</a>
-      <a routerLink="/about" class="text-white mx-4 hover:text-stone-500">About</a>
-    </div>
-    <button (click)="togglePerspective()" class="bg-stone-400 text-white rounded-full p-2 px-4 hover:bg-stone-500">Owner</button>
-  </nav>
-</div>
+<app-header></app-header>
 
 <div class="container mx-auto">
-  <router-outlet></router-outlet> <!-- This is where the routed component content will be displayed -->
+  <router-outlet></router-outlet> 
 </div>
 
-<div class="footer">
-  <!-- Footer content goes here, including copyright information -->
-</div>
+<app-footer></app-footer>
 
 
 
