@@ -10,7 +10,7 @@ export class HeaderComponent {
   constructor(public router: Router) {}
 
   togglePerspective() {
-    // Check the current route to determine the target perspective
+    // Checking the current route to determine the target perspective
     if (this.router.url === '/owner') {
       this.router.navigate(['/']);
     } else {

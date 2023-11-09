@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-// Define the structure of a blog post
+// Defining the structure of a blog post
 export interface BlogPost {
   id: number;
   title: string;
