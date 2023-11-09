@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BlogService, BlogPost } from '../blog.service';
+import { BlogService, BlogPost } from '../../services/blog.service';
 
 @Component({
   selector: 'app-owner',
