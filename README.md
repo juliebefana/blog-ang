@@ -1,14 +1,14 @@
-# BlogAng
+# Angular Blog App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+This is a simple Angular blog application with two perspectives: user and owner.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- View blog posts from the user perspective.
+- View detailed information about each blog post.
+- Add comments to blog posts.
+- Like and dislike blog posts.
+- Create new blog posts from the owner perspective.
 
 ## Build
 
